@@ -30,7 +30,14 @@ public class Card {
 
    @Override
    public String toString() {
+      if (suit = 0) {
+         return "Invalid Card";
+      }
       String newString = "";
+      String[] rankArray = {"Ace" , "2", "3", "4", "5", "6", "7", 
+         "8", "9", "10", "Jack", "Queen", "King"};
+      String[] suitArray = {"Clubs", "Diamonds", "Hearts", "Spades"};
+      newString = rankArray[rank - 1] + " of " + suitArray[suit - 1];
       return newString;
    }
 

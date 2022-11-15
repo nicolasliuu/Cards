@@ -2,6 +2,14 @@ public class TestCard {
     
     public static void main(String[] args) {
 
+        public static void assertEquals(int exp, int act, String dsc) {
+            if (exp == act) {
+               System.out.println("PASS: " + dsc);
+            } else {
+               System.out.println("FAIL: " + dsc);
+            }
+        }
+
         // Constructing card object1 with valid parameters
         Card card1 = new Card(1, 1);
         // Constructing card object2 with valid rank, invalid suit
