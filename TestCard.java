@@ -1,14 +1,15 @@
 public class TestCard {
+
+    public static void assertEquals(int exp, int act, String dsc) {
+        if (exp == act) {
+           System.out.println("PASS: " + dsc);
+        } else {
+           System.out.println("FAIL: " + dsc);
+        }
+    }
     
     public static void main(String[] args) {
 
-        public static void assertEquals(int exp, int act, String dsc) {
-            if (exp == act) {
-               System.out.println("PASS: " + dsc);
-            } else {
-               System.out.println("FAIL: " + dsc);
-            }
-        }
 
         // Constructing card object1 with valid parameters
         Card card1 = new Card(1, 1);
@@ -44,6 +45,16 @@ public class TestCard {
         System.out.println(card2);
         System.out.println(card3);
         System.out.println(card4);
+
+        Card card5 = new Card(1, 1);
+        System.out.println(card1.equals(card2));
+        System.out.println(card1.equals(card5));
+
+        System.out.println(card1.compareTo(card5));
+
+        Card kingOfClubs = new Card(13, 1);
+        System.out.println(kingOfClubs); // Must print "King of Clubs"
+        assertEquals(13, kingOfClubs.getRank(), "Rank is correctly assigned.");
 
     }
 

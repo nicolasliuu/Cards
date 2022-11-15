@@ -30,7 +30,7 @@ public class Card {
 
    @Override
    public String toString() {
-      if (suit = 0) {
+      if (suit == 0) {
          return "Invalid Card";
       }
       String newString = "";
@@ -51,4 +51,29 @@ public class Card {
       }
    }
 
+   /**
+    * Compare this Card with the specified otherCard for order.
+    * @param otherCard the other Card object to be compared.
+    * @return a negative integer, zero, or a positive integer as
+    * this object is less than, equal to, or greater than the otherCard.
+    */
+   public int compareTo(Card otherCard) {
+      if (suit < otherCard.getSuit()) {
+         return -1;
+      }
+      else if (suit > otherCard.getSuit()) {
+         return 1;
+      }
+      else {
+         if (rank < otherCard.getRank()) {
+            return -1;
+         }
+         else if (rank > otherCard.getRank()) {
+            return 1;
+         }
+         else {
+            return 0;
+         }
+      }
+   }
 }
