@@ -56,6 +56,7 @@ public class TestCard {
         System.out.println(kingOfClubs); // Must print "King of Clubs"
         assertEquals(13, kingOfClubs.getRank(), "Rank is correctly assigned.");
 
+        System.out.println(card1.compareTo(kingOfClubs));
     }
 
 }
