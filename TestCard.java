@@ -59,4 +59,5 @@ public class TestCard {
         System.out.println(card1.compareTo(kingOfClubs));
     }
 
+
 }

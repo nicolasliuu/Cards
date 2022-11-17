@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Deck {
 
     private Card[] cardsArray = new Card[52];
@@ -21,5 +23,30 @@ public class Deck {
         }
         return deckString;
     }
+
+    public void shuffle() {
+        Random rand = new Random();
+        Card[] copy = cardsArray;
+        int k = 51;
+        for (int i = 0; i < 52; i++) {
+            int j = rand.nextInt(k + 1);
+            cardsArray[i] = copy[j];
+            copy[j] = copy[k];
+            k--;
+        }
+    }
+
+    public void sort() {
+        for (int j = 0; j < 52; j++) {
+            Card c = cardsArray[j];
+            int i = j - 1;
+            while (i >= 0 && cardsArray[i].compareTo(c) == 1) {
+                cardsArray[i + 1] = cardsArray[i];
+                i--;
+            }
+            cardsArray[i + 1] = c;
+        }
+    }
+
 
 }

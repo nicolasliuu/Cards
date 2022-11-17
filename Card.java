@@ -21,8 +21,6 @@ public class Card {
    public int getRank() {
       return rank;
    }
-
-
    
    public int getSuit() {
       return suit;
@@ -43,12 +41,7 @@ public class Card {
 
    @Override
    public boolean equals(Object other) {
-      if (((Card)other).getRank() == getRank() && ((Card)other).getSuit() == getSuit()) {
-         return true;
-      }
-      else {
-         return false;
-      }
+      return (((Card)other).getRank() == getRank() && ((Card)other).getSuit() == getSuit());
    }
 
    /**
