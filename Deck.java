@@ -26,7 +26,10 @@ public class Deck {
 
     public void shuffle() {
         Random rand = new Random();
-        Card[] copy = cardsArray;
+        Card[] copy = new Card[52];
+        for (int i = 0; i < 52; i++) {
+            copy[i] = cardsArray[i];
+        }
         int k = 51;
         for (int i = 0; i < 52; i++) {
             int j = rand.nextInt(k + 1);
@@ -47,6 +50,4 @@ public class Deck {
             cardsArray[i + 1] = c;
         }
     }
-
-
 }

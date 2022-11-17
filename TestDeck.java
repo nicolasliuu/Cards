@@ -11,6 +11,4 @@ public class TestDeck {
         deck.sort();
         System.out.println(deck);
     } 
-
-
 }
