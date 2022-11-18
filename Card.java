@@ -4,6 +4,7 @@ public class Card {
    private int suit;  
 
    /**
+    * Constructs a card with the given rank and suit.
     * @param cardRank
     * @param cardSuit
     */
@@ -18,14 +19,26 @@ public class Card {
       }
    }
 
+   /**
+    * Returns the rank of the card.
+    * @return rank
+    */
    public int getRank() {
       return rank;
    }
    
+   /**
+    * Returns the suit of the card.
+    * @return suit
+    */
    public int getSuit() {
       return suit;
    }
 
+   /**
+    * Returns a string representation of the card. 
+    * Mapping integer rank and suit to string.
+    */
    @Override
    public String toString() {
       if (suit == 0) {
@@ -39,6 +52,11 @@ public class Card {
       return newString;
    }
 
+   /**
+    * Checks if a card is equal to another card.
+    * @param other the other Card object to be compared.
+    * @return boolean true if the cards are equal, false otherwise.
+    */
    @Override
    public boolean equals(Object other) {
       return (((Card)other).getRank() == getRank() && ((Card)other).getSuit() == getSuit());
