@@ -4,6 +4,9 @@ public class Deck {
 
     private Card[] cardsArray = new Card[52];
 
+    /**
+     * Constructs a deck of 52 cards in order placing them in the cardsArray.
+     */
     public Deck() {
         int suitCount = 1; 
         for (int i = 1; i < cardsArray.length + 1; i++) {
@@ -15,6 +18,9 @@ public class Deck {
         }
     } 
 
+    /**
+     * @return a string representation of the deck.
+     */
     @Override
     public String toString() {
         String deckString = "";
@@ -24,6 +30,9 @@ public class Deck {
         return deckString;
     }
 
+    /**
+     * Shuffles the deck of cards.
+     */
     public void shuffle() {
         Random rand = new Random();
         Card[] copy = new Card[52];
@@ -39,6 +48,9 @@ public class Deck {
         }
     }
 
+    /**
+     * Sorts the deck of cards into starting order.
+     */
     public void sort() {
         for (int j = 0; j < 52; j++) {
             Card c = cardsArray[j];

@@ -1,5 +1,11 @@
 public class TestCard {
 
+    /**
+     * Test method for Card class.
+     * @param exp
+     * @param act
+     * @param dsc
+     */
     public static void assertEquals(int exp, int act, String dsc) {
         if (exp == act) {
            System.out.println("PASS: " + dsc);

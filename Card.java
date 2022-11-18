@@ -38,6 +38,7 @@ public class Card {
    /**
     * Returns a string representation of the card. 
     * Mapping integer rank and suit to string.
+    * @return string representation of the card
     */
    @Override
    public String toString() {
